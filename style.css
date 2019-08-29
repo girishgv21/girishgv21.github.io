@@ -1,0 +1,167 @@
+body {
+  font-family: montserrat;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: 800;
+}
+#me {
+  position: relative;
+  float: right;
+}
+h1 img {
+  width: 900px;
+}
+.header h1 {
+  font-size: 60px;
+}
+.container1 {
+  padding: 10px 100px;
+  background: #ff4845;
+  height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.container1 p {
+  padding: 0px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-align: justify;
+  font-size: 18px;
+  width: 700px;
+  color: white;
+}
+.social i {
+  font-size: 25px;
+  color: white;
+  padding: 40px 0;
+  transition: 0.4s ease;
+}
+.social i:hover {
+  filter: opacity(50%);
+  transition: 0.4s ease;
+}
+#fb {
+  margin-left: 15px;
+}
+.in {
+  padding: 100px 0px;
+}
+.containerimg img {
+  width: 420px;
+  filter: drop-shadow(0 2.5px 10px #8a8a8a);
+}
+.pro h3 {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.containerimg {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pro p {
+  width: 430px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.pro {
+  width: 440px;
+  margin-top: 60px;
+}
+.left2,
+.left3 {
+  clear: both;
+}
+.left1,
+.left2,
+.left3 {
+  float: left;
+}
+.right1,
+.right2,
+.right3 {
+  float: right;
+}
+.uihead {
+  clear: both;
+  padding-top: 50px;
+}
+.uidesigns {
+  clear: both;
+  padding: 10px 100px;
+}
+.uidesigns img {
+  width: 600px;
+  margin-top: 50px;
+  filter: drop-shadow(0 2.5px 10px #8a8a8a);
+}
+.footer h3 {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+.footer {
+  padding: 10px 20px;
+  background: #ff4845;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .container1 {
+    padding: 10px 40px;
+  }
+
+  .container1 p {
+    padding: 0px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-align: justify;
+    font-size: 13px;
+    width: 400px;
+    color: white;
+  }
+
+  #me {
+    position: relative;
+    float: right;
+    padding: 0 80px;
+  }
+  h1 img {
+    width: 400px;
+  }
+  .social {
+    text-align: center;
+  }
+  .right {
+    float: none;
+  }
+  #projectsimg {
+    width: 300px;
+    margin-left: -20px;
+  }
+  .containerimg {
+    width: 500px;
+    padding: 10px 30px;
+  }
+  .left1,
+  .left2,
+  .left3,
+  .right1,
+  .right2,
+  .right3 {
+    float: none;
+  }
+  .uidesigns img {
+    width: 300px;
+  }
+}
