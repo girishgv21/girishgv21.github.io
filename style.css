@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    list-style: 1.6;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container {
+    max-width: calc(1250px + 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.sm {
+    max-width: calc(850px + 80px);
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    border-radius: 100px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    margin-left: 35px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+body .btn {
+    background: #1B1B1B;
+    color: white;
+    padding: 13px 25px 11px;
+    border-radius: 100px;
+    transition: all 300ms ease;
+}
+
+body .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 0px 0px 4px rgb(0 0 0 / 20%);
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0 0;
+    background: white;
+}
+
+.header-row.active {
+    border: 3px solid black;
+}
+
+.header-row {
+    transition: all 300ms ease;
+    border: 3px solid transparent;
+}
+
+.fs-30 {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.fs-24 {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.fs-20 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+
+.color-grey, .color-gray {
+    color: #585858;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    padding-bottom: 165px;
+}
+
+section#who-iam {
+    padding-top: 245px;
+}
+
+section#who-iam>div {
+    position: relative;
+}
+
+.circle-shape {
+    position: absolute;
+    top: -65px;
+    right: 0;
+    z-index: 0;
+    animation: circleAnimate 800ms infinite;
+    width: 94px;
+    height: 94px;
+    background: linear-gradient(180deg, #ADB5FF 0%, #3E4DD3 100%);
+    border-radius: 50%;
+}
+
+.rectangle-shape {
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+    animation: rectanleAnimate 800ms infinite;
+    width: 85px;
+    height: 85px;
+    background: linear-gradient(180deg, #FF3030 0%, #FF9B9B 99.96%, rgba(255, 90, 90, 0.557633) 99.97%, rgba(255, 107, 107, 0.376954) 99.98%, rgba(229, 19, 19, 0.347427) 99.99%, rgba(255, 48, 48, 0) 100%);
+}
+
+a#how-you-doin {
+    min-width: 275px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 35px 25px;
+}
+
+.grid.col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col.project-col img {
+    height: 53px;
+    margin-bottom: 30px;
+    width: auto;
+}
+
+.col.project-col {
+    padding: 28px;
+    min-height: 285px;
+    background: #FFFFFF;
+    border: 3px solid #EEEEEE;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.col.project-col:hover {
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 5%);
+    border-color: black;
+}
+
+.col.project-col p {
+    font-size: 16px;
+    line-height: 24px;
+/* or 150% */
+    text-align: center;
+    color: #898989;
+    margin-bottom: 45px;
+}
+
+.col.project-col a {
+    margin-top: auto;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height, or 150% */
+    text-align: center;
+    color: #000000;
+}
+
+.col.project-col i {
+    margin-right: 10px;
+}
+
+img.invert {
+    filter: invert(1);
+}
+
+nav a, .project-col a {
+    position: relative;
+}
+
+nav .menu-item a:after, .project-col a:after {content: "";display: block;width: 0;height: 2px;right: 0;background: black;position: absolute;bottom: 0;transition: all 300ms ease;transform-origin: right;}
+
+nav .menu-item a:hover:after, .project-col a:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.mobile-trigger {
+    display: none;
+}
+
+footer {
+    padding: 20px 0;
+    border-top: 3px solid #EEEEEE;
+}
+
+footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: black;
+}
+
+.social-links a {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.many-more a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: text;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) {
+    body .btn.lg {
+        font-size: 24px;
+        padding: 18px 35px;
+    }
+}
+
+@media (max-width: 980px) {
+    .circle-shape {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .rectangle-shape {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .grid.col-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    nav a {
+        font-size: 16px;
+    }
+    
+    .fs-20 {
+        font-size: 18px;
+    }
+    
+    .header-row {
+        padding: 10px 20px 10px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-row {
+        position: relative;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+    
+    .menu-col {
+        width: 100%;
+        order: 3;
+        display: none;
+    }
+    
+    .logo-col {
+        order: 1;
+        width: 50%;
+    }
+    
+    .mobile-trigger {
+        display: block;
+        order: 2;
+        width: 50%;
+    }
+    
+    .trigger-click {
+        width: 30px;
+        height: 2px;
+        background: black;
+        position: relative;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    
+    .trigger-click:before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: black;
+        position: absolute;
+        top: -8px;
+        transition: all 300ms ease;
+    }
+    
+    .trigger-click:after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: black;
+        position: absolute;
+        top: 8px;
+        transition: all 300ms ease;
+    }
+    
+    header {
+        padding: 20px 0 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    
+    nav a {
+        margin-left: 0;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .trigger-click.active {
+        background: white;
+    }
+    
+    .trigger-click.active:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .trigger-click.active:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    header {
+        background: transparent;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+    
+    section#who-iam {
+        padding-top: 175px;
+    }
+    
+    section {
+        padding-bottom: 70px;
+    }
+    
+    .fs-30 {
+        font-size: 20px;
+    }
+    
+    .fs-20 {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .circle-shape {
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .rectangle-shape {
+        left: 20px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    .pb-30 {
+        padding-bottom: 20px;
+    }
+    
+    .pb-20 {
+        padding-bottom: 10px;
+    }
+    
+    .grid.col-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .rectangle-shape {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Animations */
+
+@keyframes circleAnimate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rectanleAnimate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
