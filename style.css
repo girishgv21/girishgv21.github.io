@@ -218,8 +218,8 @@ a#how-you-doin {
 }
 
 .col.project-col:hover {
-    box-shadow: 0px 4px 5px rgb(0 0 0 / 5%);
-    border-color: black;
+    box-shadow: 0px 0px 18px 3px rgb(0 0 0 / 5%);
+    border-color: #EEEEEE;
 }
 
 .col.project-col p {
