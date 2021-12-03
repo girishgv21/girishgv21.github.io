@@ -9,13 +9,13 @@ html {
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     list-style: 1.6;
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 50px;
     line-height: 1.5;
     letter-spacing: 5px;
