@@ -10,6 +10,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_RwV1blpLkNL7Ta8GKSAX6');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_portfolio', 'template_h3wjihw', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        $('form input').val('')
+                        $('form textarea').val('')
+                        $('.form-response').html('<p class="success">Form submitted successfully!</p>')
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        $('.form-response').html('<p class="error">Form could not be submitted!</p>')
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -25,7 +50,7 @@
                             <li class="menu-item"><a href="#who-iam">Who I am</a></li>
                             <li class="menu-item"><a href="#about-me">About Me</a></li>
                             <li class="menu-item"><a href="#my-projects">My Projects</a></li>
-                            <li class="menu-btn"><a href="mailto:girishgv21@gmail.com" class="btn btn-dark">Contact Me</a></li>
+                            <li class="menu-btn"><a href="#contact-me" class="btn btn-dark">Contact Me</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -37,7 +62,7 @@
     <!-- Sections -->
     <section id="who-iam">
         <div class="container sm text-center">
-            <h1 class="pb-20">HI, I’M GIRISH 👋</h1>
+            <h1 class="pb-20">HI, I'M GIRISH 👋</h1>
             <p class="fs-30 pb-30">Front End Developer & Wordpress Developer</p>
             <a class="btn fs-20" id="how-you-doin">How you doin?</a>
             <div class="circle-shape"></div>
@@ -48,7 +73,75 @@
     <section id="about-me">
         <div class="container sm text-center">
             <h2 class="pb-30">ABOUT ME</h2>
-            <p class="fs-20 color-grey">I’m a Front End Developer and Wordpress Developer working in a startup software company in Bangalore from 2 years. My interests are learning and implementing different front end and PHP technologies and working on improving my skills in free time in a different way.</p>
+            <p class="fs-20 color-grey">I'm a Front End Developer and Wordpress Developer working in a startup software company in Bangalore from 2 years. My interests are learning and implementing different front end and PHP technologies and working on improving my skills in free time in a different way.</p>
+        </div>
+    </section>
+    
+    <section id="my-skills">
+        <div class="container">
+            <div class="skills-wrap grid col-2">
+                <div class="experience-col">
+                    <h4 class="pb-30">EXPERIENCE</h4>
+                    <h6 class="pb-20">iOSys Software India, Bangalore</h6>
+                    <p class="pb-20 fs-18 color-grey"><i class="far fa-clock"></i> September 2019 - Present</p>
+                    <p class="pb-20 fs-18 color-grey"><i class="fas fa-fire"></i> Wordpress Developer | Front-End Developer</p>
+                    <p class="fs-18 color-grey"><i class="fas fa-meteor"></i> HTML, CSS, JS, Wordpress, jQuery</p>
+                </div>
+                <div class="skills-col">
+                    <h4 class="pb-30">SKILLS</h4>
+                    <div class="skills grid col-2 m-gap-0">
+                        <div class="skill html">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count html" data-count="90"></div>
+                            </div>
+                            <p class="fs-16">HTML <i class="fab fa-html5"></i></p>
+                        </div>
+                        <div class="skill css">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count css" data-count="90"></div>
+                            </div>
+                            <p class="fs-16">CSS <i class="fab fa-css3-alt"></i></p>
+                        </div>
+                        <div class="skill js">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count js" data-count="70"></div>
+                            </div>
+                            <p class="fs-16">JavaScript <i class="fab fa-js"></i></p>
+                        </div>
+                        <div class="skill jquery">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count jquery" data-count="80"></div>
+                            </div>
+                            <p class="fs-16">jQuery <i class="fab fa-js"></i></p>
+                        </div>
+                        <div class="skill php">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count php" data-count="60"></div>
+                            </div>
+                            <p class="fs-16">PHP <i class="fab fa-php"></i></i></p>
+                        </div>
+                        <div class="skill wordpress">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count wordpress" data-count="90"></div>
+                            </div>
+                            <p class="fs-16">WordPress <i class="fab fa-wordpress"></i></p>
+                        </div>
+                        <div class="skill linux">
+                            <div class="bar">
+                                <div class="bar-bg"></div>
+                                <div class="bar-count linux" data-count="70"></div>
+                            </div>
+                            <p class="fs-16">Linux <i class="fab fa-linux"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -63,7 +156,7 @@
                 </div>
                 <div class="col project-col">
                     <img src="./assets/images/Titanium-Solar.svg" alt="Titanium Solar">
-                    <p>Titanium Solar – Creating equity and sustainability for the world, plus saving you money with solar.</p>
+                    <p>Titanium Solar - Creating equity and sustainability for the world, plus saving you money with solar.</p>
                     <a href="https://titaniumsolar.com"><i class="fas fa-link"></i>titaniumsolar.com</a>
                 </div>
                 <div class="col project-col">
@@ -73,7 +166,7 @@
                 </div>
                 <div class="col project-col">
                     <img src="./assets/images/Consus.svg" alt="Consus">
-                    <p>Consus Global – Consus is a recognized and trusted global supply chain solutions provider.</p>
+                    <p>Consus Global - Consus is a recognized and trusted global supply chain solutions provider.</p>
                     <a href="https://consus-global.com"><i class="fas fa-link"></i>consus-global.com</a>
                 </div>
                 <div class="col project-col">
@@ -90,6 +183,40 @@
             <div class="many-more">
                 <a class="">And Many More 😉</a>
             </div>
+        </div>
+    </section>
+
+    <section id="contact-me">
+        <div class="container">
+            <h2 class="pb-30 text-center">CONTACT ME</h2>
+            <form id="contact-form">
+                <div class="form-row two-col">
+                    <div class="form-col">
+                        <label>Name <span>*</span></label>
+                        <input type="text" name="user_name" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="user_tel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Email <span>*</span></label>
+                        <input type="email" name="user_email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Message <span>*</span></label>
+                        <textarea name="message" required></textarea>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" value="Send">Send</button>
+                </div>
+                <div class="form-response"></div>
+            </form>
         </div>
     </section>
 
