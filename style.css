@@ -840,6 +840,14 @@ div[data-count="10"] {
     width: 100px;
     height: auto;
   }
+
+  footer > div {
+    flex-direction: column;
+  }
+
+  .copyright {
+    padding: 35px 0;
+  }
 }
 
 /* Animations */
