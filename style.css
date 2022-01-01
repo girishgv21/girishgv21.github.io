@@ -824,6 +824,11 @@ div[data-count="10"] {
   form#contact-form {
     padding: 40px 20px;
   }
+
+  .col.project-col img {
+    width: 100px;
+    height: auto;
+  }
 }
 
 /* Animations */
