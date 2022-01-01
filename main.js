@@ -28,7 +28,7 @@ $(function () {
     });
 
   $(".trigger-click").on("click", function () {
-    $(this).toggleClass("active");
+    $(this).toggleClass("active")
     $(".menu-col").slideToggle();
     $("header").toggleClass("transparent");
   });
