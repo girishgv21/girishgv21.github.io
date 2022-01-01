@@ -602,6 +602,17 @@ div[data-count="10"] {
   -webkit-text-fill-color: transparent;
 }
 
+.experience-col p {
+  position: relative;
+  padding-left: 27px;
+}
+
+.experience-col i {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /* Media Query */
 
 @media (min-width: 768px) {
