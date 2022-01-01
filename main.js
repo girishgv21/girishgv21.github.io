@@ -32,4 +32,8 @@ $(function () {
     $(".menu-col").slideToggle();
     $("header").toggleClass("transparent");
   });
+
+  $('.page-menu').on('click', function() {
+    $(".trigger-click").trigger( "click" );
+  })
 });
