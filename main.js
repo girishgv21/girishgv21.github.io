@@ -26,14 +26,22 @@ $(function () {
     }
     lastScrollTop = st;
     });
+    
 
-  $(".trigger-click").on("click", function () {
-    $(this).toggleClass("active")
-    $(".menu-col").slideToggle();
-    $("header").toggleClass("transparent");
-  });
+    function checkPosition() {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        $(".trigger-click").on("click", function () {
+          $(this).toggleClass("active");
+          $(".menu-col").slideToggle();
+          $("header").toggleClass("transparent");
+        });
+      
+        $('.page-menu').on('click', function() {
+          $(".trigger-click").trigger( "click" );
+        })
+      }
+  }
 
-  $('.page-menu').on('click', function() {
-    $(".trigger-click").trigger( "click" );
-  })
+  checkPosition()
+
 });
