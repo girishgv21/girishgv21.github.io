@@ -73,7 +73,7 @@
     <section id="about-me">
         <div class="container sm text-center">
             <h2 class="pb-30">ABOUT ME</h2>
-            <p class="fs-20 color-grey">I'm a Front End Developer and Wordpress Developer working in a startup software company in Bangalore from 3 years 6 months. My interests are learning and implementing different front end and PHP technologies and working on improving my skills in free time in a different way.</p>
+            <p class="fs-20 color-grey">I'm a Software Development Engineer(SDE) working in SaaS Labs and previously worked with iOSys Software India as Front-End Developer. My interests are learning and implementing different front end and PHP technologies and working on improving my skills in free time in a different way.</p>
         </div>
     </section>
     
@@ -82,8 +82,13 @@
             <div class="skills-wrap grid col-2">
                 <div class="experience-col">
                     <h4 class="pb-30">EXPERIENCE</h4>
-                    <h6 class="pb-20">iOSys Software India, Bangalore</h6>
-                    <p class="pb-20 fs-18 color-grey"><i class="far fa-clock"></i> September 2019 - Present</p>
+                    <h6 class="pb-20 saas">SaaS Labs (Remote)</h6>
+                    <p class="pb-20 fs-18 color-grey"><i class="far fa-clock"></i> March 2023 - Present</p>
+                    <p class="pb-20 fs-18 color-grey"><i class="fas fa-fire"></i> Software Development Engineer (SDE)</p>
+                    <p class="fs-18 color-grey"><i class="fas fa-meteor"></i> WordPress, Bitbucket, Git, Docker</p>
+                    <div class="pb-30"></div>
+                    <h6 class="pb-20">iOSys Software India (Bangalore)</h6>
+                    <p class="pb-20 fs-18 color-grey"><i class="far fa-clock"></i> September 2019 - March 2023</p>
                     <p class="pb-20 fs-18 color-grey"><i class="fas fa-fire"></i> Wordpress Developer | Front-End Developer</p>
                     <p class="fs-18 color-grey"><i class="fas fa-meteor"></i> HTML, CSS, JS, Wordpress, jQuery</p>
                 </div>
@@ -189,15 +194,11 @@
     <section id="contact-me">
         <div class="container">
             <h2 class="pb-30 text-center">CONTACT ME</h2>
-            <form id="contact-form">
-                <div class="form-row two-col">
+            <form id="contact-form" action="https://formspree.io/f/xoqrallb" method="POST">
+                <div class="form-row">
                     <div class="form-col">
                         <label>Name <span>*</span></label>
                         <input type="text" name="user_name" required>
-                    </div>
-                    <div class="form-col">
-                        <label for="phone">Phone</label>
-                        <input type="tel" name="user_tel">
                     </div>
                 </div>
                 <div class="form-row">
@@ -226,7 +227,7 @@
                 <img src="./assets/images/GV Logo.svg" alt="Logo">
             </div>
             <div class="copyright">
-                <p>Copyright &copy; 2022 | Girish Babu G V</p>
+                <p>Copyright &copy; <span id="year"></span> | Girish Babu G V</p>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/girishgv21" target="_blank"><i class="fab fa-linkedin-in"></i></a>
