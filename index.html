@@ -194,7 +194,8 @@
     <section id="contact-me">
         <div class="container">
             <h2 class="pb-30 text-center">CONTACT ME</h2>
-            <form id="contact-form" action="https://formspree.io/f/xoqrallb" method="POST">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="67cd0e0f-c4d2-4774-8644-eef7d6073c83">
                 <div class="form-row">
                     <div class="form-col">
                         <label>Name <span>*</span></label>
@@ -216,7 +217,7 @@
                 <div class="form-submit">
                     <button type="submit" value="Send">Send</button>
                 </div>
-                <div class="form-response"></div>
+                <!-- <div class="form-response"></div> -->
             </form>
         </div>
     </section>
@@ -239,6 +240,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="./main.js"></script>
 </body>
 </html>
