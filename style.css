@@ -895,3 +895,8 @@ div[data-count="10"] {
 div#loom-companion-mv3 {
   display: none;
 }
+
+div#result {
+  text-align: center;
+  padding-top: 20px;
+}
