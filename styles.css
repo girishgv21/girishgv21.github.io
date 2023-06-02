@@ -885,3 +885,13 @@ div[data-count="10"] {
     transform: scale(1);
   }
 }
+
+.experience-col h6.pb-20.saas {
+  background: linear-gradient(to right, #3a9f72 0%, #0e271c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div#loom-companion-mv3 {
+  display: none;
+}
