@@ -196,23 +196,23 @@
                 <div class="form-row">
                     <div class="form-col">
                         <label>Name <span>*</span></label>
-                        <input type="text" name="user_name" required>
+                        <input type="text" id="user_name" name="user_name" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-col">
                         <label>Email <span>*</span></label>
-                        <input type="email" name="user_email" required>
+                        <input type="email" id="user_email" name="user_email" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-col">
                         <label>Message <span>*</span></label>
-                        <textarea name="message" required></textarea>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
                 </div>
                 <div class="form-submit">
-                    <button type="submit" value="Send">Send</button>
+                    <button type="submit" value="Send" id="submitData">Send</button>
                 </div>
                 <div class="form-response" id="result"></div>
             </form>
@@ -239,5 +239,50 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="./main.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+      import { getFirestore, doc, setDoc, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDzclYu47yer4O3p4-ylDYjWhnKxOetO6o",
+        authDomain: "girish-portfolio-c66ac.firebaseapp.com",
+        projectId: "girish-portfolio-c66ac",
+        storageBucket: "girish-portfolio-c66ac.appspot.com",
+        messagingSenderId: "1054948388800",
+        appId: "1:1054948388800:web:20c728bcbb884416c8e225",
+        measurementId: "G-9BMJ3F7F29"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    // Initialize Cloud Firestore and get a reference to the service
+    const db = getFirestore(app);
+        
+    submitData.addEventListener('click', (e) => {
+      e.preventDefault();
+        
+              var currentdate = new Date();
+        var user_name = getElementVal("user_name");
+        var user_email = getElementVal("user_email");
+        var message = getElementVal("message");
+
+              addDoc(collection(db, "contactForm"), {
+                    userName: user_name,
+                    userEmail: user_email,
+                    message: message,
+                    submitDate: currentdate
+                });
+    })
+    const getElementVal = (id) => {
+      return document.getElementById(id).value;
+    };
+    </script>
 </body>
 </html>
