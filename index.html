@@ -266,14 +266,14 @@
     const db = getFirestore(app);
         
     submitData.addEventListener('click', (e) => {
-      e.preventDefault();
+      // e.preventDefault();
         
               var currentdate = new Date();
         var user_name = getElementVal("user_name");
         var user_email = getElementVal("user_email");
         var message = getElementVal("message");
 
-              addDoc(collection(db, "contactForm"), {
+              setDoc(collection(db, "contactForm", user_email), {
                     userName: user_name,
                     userEmail: user_email,
                     message: message,
