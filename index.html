@@ -273,7 +273,7 @@
         var user_email = getElementVal("user_email");
         var message = getElementVal("message");
 
-              setDoc(collection(db, "contactForm", user_email), {
+              addDoc(collection(db, "contactForm"), {
                     userName: user_name,
                     userEmail: user_email,
                     message: message,
