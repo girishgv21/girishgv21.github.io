@@ -85,4 +85,13 @@ $(function () {
           });
   });
 
+        function amplitudeEvent(name,userid,pageURL){
+          var eventProperties = {
+            "page url": pageURL,
+            "platform" : "Web",
+            "menu name" : name
+          };
+          logEventAmplitude(userid, "sidebar menu clicked", eventProperties);
+        }
+
 });
