@@ -53,6 +53,36 @@
     
     amplitude.init('d260854d251553ad0eef06222ba71be6');
 
+    function logEventAmplitude(event, properties = null){
+
+
+        if (typeof amplitude_queue_interval !== 'undefined') {
+          console.log("CLEAR");
+          clearInterval(amplitude_queue_interval);
+        }
+
+        var event_entry = {"event": event, "properties":properties, "companyid":'test' };
+
+        if (localStorage.getItem("amplitude_events_queue") === null) {
+          var event_Arr = [];
+          event_Arr.push(event_entry);
+          localStorage.setItem("amplitude_events_queue", JSON.stringify(event_Arr));
+          return;
+        }
+
+
+        var stored = JSON.parse(localStorage.getItem("amplitude_events_queue"));
+
+        stored.push(event_entry);
+
+        localStorage.setItem("amplitude_events_queue", JSON.stringify(stored));
+
+        setTimeout(() => {
+          console.log("ENTERED Again");
+            ampli_queue_func();
+        }, 3000);
+
+    }
                 function amplitudeEvent(name,pageURL){
           var eventProperties = {
             "page url": pageURL,
