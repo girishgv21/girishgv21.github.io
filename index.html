@@ -53,13 +53,13 @@
     
     amplitude.init('d260854d251553ad0eef06222ba71be6');
 
-                function amplitudeEvent(name,userid,pageURL){
+                function amplitudeEvent(name,pageURL){
           var eventProperties = {
             "page url": pageURL,
             "platform" : "Web",
-            "menu name" : name
+            "event name" : name
           };
-          logEventAmplitude(userid, "sidebar menu clicked", eventProperties);
+          logEventAmplitude("sidebar menu clicked", eventProperties);
         }
     </script>
 </head>
@@ -78,7 +78,7 @@
                 <div class="menu-col">
                     <nav>
                         <ul>
-                            <li class="menu-item"><a href="#who-iam" class="page-menu" onclick="amplitudeEvent('Menu item 1',userid,'https://girishgv21.github.io');">Who I am</a></li>
+                            <li class="menu-item"><a href="#who-iam" class="page-menu" onclick="amplitudeEvent('Menu item 1','https://girishgv21.github.io');">Who I am</a></li>
                             <li class="menu-item"><a href="#about-me" class="page-menu">About Me</a></li>
                             <li class="menu-item"><a href="#my-projects" class="page-menu">My Projects</a></li>
                             <li class="menu-btn"><a href="#contact-me" class="page-menu btn btn-dark">Contact Me</a></li>
