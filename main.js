@@ -13,6 +13,7 @@ $(function () {
         "page url": "https://girishgv21.github.io/", "platform": "Web", "button name": "How you Doin?"
       };
       logEventAmplitude("web_user", "hero button clicked", eventProperties);
+      console.log(eventProperties);
     } catch (err) {
       console.log(err);
     }
