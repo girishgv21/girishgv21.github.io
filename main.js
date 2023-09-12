@@ -8,15 +8,16 @@ $(function () {
     });
 
   $('#how-you-doin').on('click', function () {
-    try {
-      var eventProperties = {
-        "page url": "https://girishgv21.github.io/", "platform": "Web", "button name": "How you Doin?"
-      };
-      logEventAmplitude("web_user", "hero button clicked", eventProperties);
-      console.log(eventProperties);
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   var eventProperties = {
+    //     "page url": "https://girishgv21.github.io/", "platform": "Web", "button name": "How you Doin?"
+    //   };
+    //   logEventAmplitude("web_user", "hero button clicked", eventProperties);
+    //   console.log(eventProperties);
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    amplitude.getInstance().logEvent('Button Clicked', { 'Button Text': 'How you doin?' });
   })
 
   $(window).on("scroll", function () {
