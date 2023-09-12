@@ -58,6 +58,12 @@
         <div><img src="https://mc.yandex.ru/watch/94700678" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- Amplitude Script -->
+    <script type="text/javascript">
+        !function () { "use strict"; !function (e, t) { var n = e.amplitude || { _q: [], _iq: {} }; if (n.invoked) e.console && console.error && console.error("Amplitude snippet has been loaded."); else { var r = function (e, t) { e.prototype[t] = function () { return this._q.push({ name: t, args: Array.prototype.slice.call(arguments, 0) }), this } }, s = function (e, t, n) { return function (r) { e._q.push({ name: t, args: Array.prototype.slice.call(n, 0), resolve: r }) } }, o = function (e, t, n) { e[t] = function () { if (n) return { promise: new Promise(s(e, t, Array.prototype.slice.call(arguments))) } } }, i = function (e) { for (var t = 0; t < m.length; t++)o(e, m[t], !1); for (var n = 0; n < g.length; n++)o(e, g[n], !0) }; n.invoked = !0; var u = t.createElement("script"); u.type = "text/javascript", u.integrity = "sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE", u.crossOrigin = "anonymous", u.async = !0, u.src = "https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz", u.onload = function () { e.amplitude.runQueuedFunctions || console.log("[Amplitude] Error: could not load SDK") }; var a = t.getElementsByTagName("script")[0]; a.parentNode.insertBefore(u, a); for (var c = function () { return this._q = [], this }, p = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset", "preInsert", "postInsert", "remove", "getUserProperties"], l = 0; l < p.length; l++)r(c, p[l]); n.Identify = c; for (var d = function () { return this._q = [], this }, f = ["getEventProperties", "setProductId", "setQuantity", "setPrice", "setRevenue", "setRevenueType", "setEventProperties"], v = 0; v < f.length; v++)r(d, f[v]); n.Revenue = d; var m = ["getDeviceId", "setDeviceId", "getSessionId", "setSessionId", "getUserId", "setUserId", "setOptOut", "setTransport", "reset", "extendSession"], g = ["init", "add", "remove", "track", "logEvent", "identify", "groupIdentify", "setGroup", "revenue", "flush"]; i(n), n.createInstance = function (e) { return n._iq[e] = { _q: [] }, i(n._iq[e]), n._iq[e] }, e.amplitude = n } }(window, document) }();
+
+        amplitude.init('d260854d251553ad0eef06222ba71be6');
+    </script>
 </head>
 
 <body>
@@ -281,50 +287,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    <!-- Amplitude Script -->
-    <script type="text/javascript">
-        !function () { "use strict"; !function (e, t) { var n = e.amplitude || { _q: [], _iq: {} }; if (n.invoked) e.console && console.error && console.error("Amplitude snippet has been loaded."); else { var r = function (e, t) { e.prototype[t] = function () { return this._q.push({ name: t, args: Array.prototype.slice.call(arguments, 0) }), this } }, s = function (e, t, n) { return function (r) { e._q.push({ name: t, args: Array.prototype.slice.call(n, 0), resolve: r }) } }, o = function (e, t, n) { e[t] = function () { if (n) return { promise: new Promise(s(e, t, Array.prototype.slice.call(arguments))) } } }, i = function (e) { for (var t = 0; t < m.length; t++)o(e, m[t], !1); for (var n = 0; n < g.length; n++)o(e, g[n], !0) }; n.invoked = !0; var u = t.createElement("script"); u.type = "text/javascript", u.integrity = "sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE", u.crossOrigin = "anonymous", u.async = !0, u.src = "https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz", u.onload = function () { e.amplitude.runQueuedFunctions || console.log("[Amplitude] Error: could not load SDK") }; var a = t.getElementsByTagName("script")[0]; a.parentNode.insertBefore(u, a); for (var c = function () { return this._q = [], this }, p = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset", "preInsert", "postInsert", "remove", "getUserProperties"], l = 0; l < p.length; l++)r(c, p[l]); n.Identify = c; for (var d = function () { return this._q = [], this }, f = ["getEventProperties", "setProductId", "setQuantity", "setPrice", "setRevenue", "setRevenueType", "setEventProperties"], v = 0; v < f.length; v++)r(d, f[v]); n.Revenue = d; var m = ["getDeviceId", "setDeviceId", "getSessionId", "setSessionId", "getUserId", "setUserId", "setOptOut", "setTransport", "reset", "extendSession"], g = ["init", "add", "remove", "track", "logEvent", "identify", "groupIdentify", "setGroup", "revenue", "flush"]; i(n), n.createInstance = function (e) { return n._iq[e] = { _q: [] }, i(n._iq[e]), n._iq[e] }, e.amplitude = n } }(window, document) }();
-
-        amplitude.init('d260854d251553ad0eef06222ba71be6');
-
-        function logEventAmplitude(event, properties = null) {
-
-
-            if (typeof amplitude_queue_interval !== 'undefined') {
-                console.log("CLEAR");
-                clearInterval(amplitude_queue_interval);
-            }
-
-            var event_entry = { "event": event, "properties": properties, "companyid": 'test' };
-
-            if (localStorage.getItem("amplitude_events_queue") === null) {
-                var event_Arr = [];
-                event_Arr.push(event_entry);
-                localStorage.setItem("amplitude_events_queue", JSON.stringify(event_Arr));
-                return;
-            }
-
-
-            var stored = JSON.parse(localStorage.getItem("amplitude_events_queue"));
-
-            stored.push(event_entry);
-
-            localStorage.setItem("amplitude_events_queue", JSON.stringify(stored));
-
-            setTimeout(() => {
-                console.log("ENTERED Again");
-            }, 3000);
-
-        }
-        function amplitudeEvent(name, pageURL) {
-            var eventProperties = {
-                "page url": pageURL,
-                "platform": "Web",
-                "event name": name
-            };
-            logEventAmplitude("Menu 1 click", eventProperties);
-        }
-    </script>
+    
     <script src="./main.js"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
